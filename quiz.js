@@ -31,7 +31,7 @@ const questions = [
   },
   {
     question: '(Q 5/20) Who is likely to be next richest man in Africa?',
-    options: ['A.A Rano', "Aliko Dangote", 'Berlin'],
+    options: ['A.A Rano', "Aliko Dangote", 'Bola Ahmed Tinubu'],
     correctAnswer: 'A.A Rano'
   },
   {
@@ -41,12 +41,12 @@ const questions = [
   },
   {
     question: '(Q 7/20) Which time start a new day?',
-    options: ['Monarch', '00:00', '12:00pm'],
+    options: ['11:59pm', '00:00', '12:00pm'],
     correctAnswer: '00:00'
   },
   {
     question: '(Q 8/20) Nigeria Practice which from of goverance most?',
-    options: ['11:59pm', 'London', 'Berlin'],
+    options: ['Democracy', 'Monarch', 'Military'],
     correctAnswer: 'Paris'
   },
   {
@@ -112,7 +112,7 @@ const questions = [
   
 ];
 
-// Display the current question and options
+// To display my questions and options
 function displayQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
   questionElement.innerText = currentQuestion.question;
@@ -122,7 +122,7 @@ function displayQuestion() {
   }
 }
 
-// Check the selected option and update the score
+// Checking score for selected option
 function checkAnswer(selectedOption) {
   const currentQuestion = questions[currentQuestionIndex];
   const correctAnswer = currentQuestion.correctAnswer;
@@ -132,7 +132,7 @@ function checkAnswer(selectedOption) {
   }
 }
 
-// Move to the next question or finish the quiz
+// Loading next question in the array
 function nextQuestion() {
   const selectedOption = getSelectedOption();
   if (selectedOption) {
@@ -147,7 +147,7 @@ function nextQuestion() {
   }
 }
 
-// Get the selected option
+// Grabbing the selected option
 function getSelectedOption() {
   for (let i = 0; i < optionButtons.length; i++) {
     if (optionButtons[i].classList.contains('selected')) {
@@ -157,14 +157,14 @@ function getSelectedOption() {
   return null;
 }
 
-// Clear the selected option
+// Clearing the selected option at once
 function clearSelectedOption() {
   for (let i = 0; i < optionButtons.length; i++) {
     optionButtons[i].classList.remove('selected');
   }
 }
 
-// Finish the quiz and display the score
+// Finishing the quiz and displaying of user score
 function finishQuiz() {
   questionElement.innerText = '';
   for (let i = 0; i < optionButtons.length; i++) {
@@ -182,7 +182,7 @@ function finishQuiz() {
   }
 }
 
-// Retry the quiz
+// Retry the quiz for failed user
 function retryQuiz() {
   currentQuestionIndex = 0;
   score = 0;
@@ -197,7 +197,7 @@ function retryQuiz() {
   submitButton.style.display = 'block';
 }
 
-// Add event listeners
+// Adding event listeners for buttons
 for (let i = 0; i < optionButtons.length; i++) {
   optionButtons[i].addEventListener('click', function() {
     clearSelectedOption();
