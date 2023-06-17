@@ -31,8 +31,8 @@ const questions = [
   },
   {
     question: '(Q 5/20) Who is likely to be next richest man in Africa?',
-    options: ['A.A Rano', "Aliko Dangote", 'Bola Ahmed Tinubu'],
-    correctAnswer: 'A.A Rano'
+    options: ['A.A Rano', "Aliko Dangote", 'Johannn Rupert'],
+    correctAnswer: 'Johannn Rupert'
   },
   {
     question: '(Q 6/20) Nigeria just inagural her _______ president?',
